@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/ChimeHQ/ChimeKit",
         "state": {
           "branch": null,
-          "revision": "2ff549e6f0088d784b5aab5c57b3fb17003ac0bd",
-          "version": "0.1.0"
+          "revision": "f19916df7e16f131d069a0b375381bafa404a46a",
+          "version": "0.1.1"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/ChimeHQ/LanguageServerProtocol",
         "state": {
           "branch": null,
-          "revision": "5f74d0574f0b56d36ed810b04322329527679219",
-          "version": "0.7.8"
+          "revision": "abf80b752f5db0aa3f293b30f2ffeebc0f7decdf",
+          "version": "0.7.9"
         }
       },
       {

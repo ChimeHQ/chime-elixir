@@ -5,46 +5,16 @@ import ChimeKit
 import ProcessServiceClient
 
 public final class ElixirExtension {
-	let host: any HostProtocol
 	private let lspService: LSPService
-	private let logger: Logger
 
 	public init(host: any HostProtocol, processHostServiceName: String) {
-		self.host = host
-		let logger = Logger(subsystem: "com.chimehq.ChimeElixir", category: "ElixirExtension")
-		self.logger = logger
-
 		let filter = LSPService.contextFilter(for: [.elixirSource])
-		let paramProvider = { try await ElixirExtension.provideParams(logger: logger, processHostService: processHostServiceName) }
 
 		self.lspService = LSPService(host: host,
 									 contextFilter: filter,
-									 executionParamsProvider: paramProvider,
-									 processHostServiceName: processHostServiceName)
-	}
-}
-
-extension ElixirExtension {
-	private static func provideParams(logger: Logger, processHostService: String) async throws -> Process.ExecutionParameters {
-		let userEnv = try await HostedProcess.userEnvironment(with: processHostService)
-
-		let whichParams = Process.ExecutionParameters(path: "/usr/bin/which", arguments: ["elixir-ls"], environment: userEnv)
-
-		let data = try await HostedProcess(named: processHostService, parameters: whichParams).runAndReadStdout()
-
-		guard let output = String(data: data, encoding: .utf8) else {
-			throw LSPServiceError.serverNotFound
-		}
-
-		if output.isEmpty {
-			throw LSPServiceError.serverNotFound
-		}
-
-		let path = output.trimmingCharacters(in: .whitespacesAndNewlines)
-
-		logger.info("tool found: \(path, privacy: .public)")
-
-		return .init(path: path, environment: userEnv)
+									 executableName: "elixir-ls",
+									 processHostServiceName: processHostServiceName,
+									 logMessages: true)
 	}
 }
 

@@ -7,6 +7,10 @@ A [Chime][chime] extension for Elixir.
 
 This Chime extension supports the [Elixir][elixir] programming language. It integrates [ElixirLS][elixir-ls] with [ChimeKit][chimekit]'s `ExtensionProtocol`.
 
+## Usage
+
+This extension requires that `elixir-ls` be accessible in the user's `PATH`.
+
 ## Suggestions or Feedback
 
 We'd love to hear from you! Get in touch via [twitter](https://twitter.com/chimehq), an issue, or a pull request.
