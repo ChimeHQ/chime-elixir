@@ -8,10 +8,7 @@ public final class ElixirExtension {
 	private let lspService: LSPService
 
 	public init(host: any HostProtocol, processHostServiceName: String) {
-		let filter = LSPService.contextFilter(for: [.elixirSource])
-
 		self.lspService = LSPService(host: host,
-									 contextFilter: filter,
 									 executableName: "elixir-ls",
 									 processHostServiceName: processHostServiceName,
 									 logMessages: true)
@@ -19,6 +16,12 @@ public final class ElixirExtension {
 }
 
 extension ElixirExtension: ExtensionProtocol {
+	public var configuration: ExtensionConfiguration {
+		get async throws {
+			return ExtensionConfiguration(contentFilter: [.uti(.elixirSource)])
+		}
+	}
+
 	public func didOpenProject(with context: ProjectContext) async throws {
 		try await lspService.didOpenProject(with: context)
 	}

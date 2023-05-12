@@ -3,16 +3,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "ChimeElixir",
+	name: "ChimeElixir",
 	platforms: [.macOS(.v11)],
-    products: [
-        .library(name: "ChimeElixir", targets: ["ChimeElixir"]),
-    ],
-    dependencies: [
-		.package(url: "https://github.com/ChimeHQ/ChimeKit", from: "0.1.1"),
-    ],
-    targets: [
-        .target(name: "ChimeElixir", dependencies: ["ChimeKit"]),
-        .testTarget(name: "ChimeElixirTests", dependencies: ["ChimeElixir"]),
-    ]
+	products: [
+		.library(name: "ChimeElixir", targets: ["ChimeElixir"]),
+	],
+	dependencies: [
+		.package(url: "https://github.com/ChimeHQ/ChimeKit", from: "0.2.0"),
+	],
+	targets: [
+		.target(name: "ChimeElixir", dependencies: ["ChimeKit"]),
+		.testTarget(name: "ChimeElixirTests", dependencies: ["ChimeElixir"]),
+	]
 )
