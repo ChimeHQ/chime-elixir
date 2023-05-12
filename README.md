@@ -18,7 +18,7 @@ We'd love to hear from you! Get in touch via [twitter](https://twitter.com/chime
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [license]: https://opensource.org/licenses/BSD-3-Clause
-[license badge]: https://img.shields.io/github/license/ChimeHQ/chime-rust
+[license badge]: https://img.shields.io/github/license/ChimeHQ/chime-elixir
 [chime]: https://www.chimehq.com
 [elixir]: https://elixir-lang.org
 [elixir-ls]: https://github.com/elixir-lsp/elixir-ls
