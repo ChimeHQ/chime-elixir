@@ -1,5 +1,3 @@
-[![License][license badge]][license]
-
 # chime-elixir
 A [Chime][chime] extension for Elixir.
 
@@ -11,14 +9,16 @@ This Chime extension supports the [Elixir][elixir] programming language. It inte
 
 This extension requires that `elixir-ls` be accessible in the user's `PATH`.
 
-## Suggestions or Feedback
+## Contributing and Collaboration
 
-We'd love to hear from you! Get in touch via an issue or pull request.
+I would love to hear from you! Issues or pull requests work great. A [Discord server][discord] is also available for live help, but I have a strong bias towards answering in the form of documenation.
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+I prefer collaboration, and would love to find ways to work together if you have a similar project.
 
-[license]: https://opensource.org/licenses/BSD-3-Clause
-[license badge]: https://img.shields.io/github/license/ChimeHQ/chime-elixir
+I prefer indentation with tabs for improved accessibility. But, I'd rather you use the system you want and make a PR than hesitate because of whitespace.
+
+By participating in this project you agree to abide by the [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+
 [chime]: https://www.chimehq.com
 [elixir]: https://elixir-lang.org
 [elixir-ls]: https://github.com/elixir-lsp/elixir-ls
