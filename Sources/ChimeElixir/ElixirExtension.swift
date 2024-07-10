@@ -17,7 +17,7 @@ extension ElixirExtension: ExtensionProtocol {
 		ExtensionConfiguration(contentFilter: [.uti(.elixirSource)])
 	}
 
-	public var applicationService: ApplicationService {
+	public var applicationService: some ApplicationService {
 		return lspService
 	}
 }
